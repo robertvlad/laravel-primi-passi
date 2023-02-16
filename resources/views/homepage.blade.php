@@ -9,7 +9,13 @@
     </head>
     
     <body>
-        <h1>{{ $welcome }}</h1>    
+        <h1>{{ $welcome }}</h1> 
+
+        <ul>
+            @foreach ($menu as $key => $item ) 
+                <li>{{ $key }}</li>            
+            @endforeach   
+        </ul>
 
     </body>
 </html>

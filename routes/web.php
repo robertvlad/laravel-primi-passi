@@ -16,6 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get ('/', function() {
 
     $welcome = 'Hello World';
+
+    $menu = [
+        'Homepage' => '/',
+        'Contact Us' => '/contact_us',
+        'About Us'   => '/about_us'
+    ];
     
-    return view ('homepage', compact('welcome'));
+    return view ('homepage', compact('welcome', 'menu'));
 })->name('Homepage');
