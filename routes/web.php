@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get ('/', function() {
 
-    $welcome = 'Hello World';
+    $welcome = 'HOMEPAGE';
 
     $menu = [
         'Homepage' => '/',
@@ -24,4 +24,32 @@ Route::get ('/', function() {
     ];
     
     return view ('homepage', compact('welcome', 'menu'));
-})->name('Homepage');
+})->name('homepage');
+
+
+Route::get ('/contact_us', function() {
+
+    $welcome = 'CONTACT US PAGE';
+
+    $menu = [
+        'Homepage' => '/',
+        'Contact Us' => '/contact_us',
+        'About Us'   => '/about_us'
+    ];
+    
+    return view ('contact_us', compact('welcome', 'menu'));
+})->name('contact_Us');
+
+
+Route::get ('/about_us', function() {
+
+    $welcome = 'ABOUT US PAGE';
+
+    $menu = [
+        'Homepage' => '/',
+        'Contact Us' => '/contact_us',
+        'About Us'   => '/about_us'
+    ];
+    
+    return view ('about_us', compact('welcome', 'menu'));
+})->name('about_us');
